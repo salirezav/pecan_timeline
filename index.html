@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline with Image Gallery</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .timeline {
+            position: relative;
+            margin: 20px 0;
+            padding: 0;
+            list-style: none;
+            text-align: center;
+        }
+
+        .timeline:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #ccc;
+            z-index: 1;
+        }
+
+        .timeline-item {
+            position: relative;
+            display: inline-block;
+            width: 12%;
+            text-align: center;
+        }
+
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            width: 12px;
+            height: 12px;
+            background: #6203dd;
+            border-radius: 50%;
+            z-index: 2;
+        }
+
+        .timeline-item span {
+            display: block;
+            /* margin-top: 20px; */
+            margin-top: 70px;
+        }
+
+        .modal-body img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <ul class="timeline">
+                <li class="timeline-item" data-toggle="modal" data-target="#modal1">
+                    <span>April 20, 2022</span>
+                </li>
+                <li class="timeline-item" data-toggle="modal" data-target="#modal2">
+                    <span>April 27, 2022</span>
+                </li>
+                <li class="timeline-item" data-toggle="modal" data-target="#modal3">
+                    <span>May 2, 2022</span>
+                </li>
+                <li class="timeline-item" data-toggle="modal" data-target="#modal4">
+                    <span>June 2, 2022</span>
+                </li>
+                <li class="timeline-item" data-toggle="modal" data-target="#modal5">
+                    <span>June 7, 2022</span>
+                </li>
+                <li class="timeline-item" data-toggle="modal" data-target="#modal6">
+                    <span>July 7, 2022</span>
+                </li>
+                <li class="timeline-item" data-toggle="modal" data-target="#modal7">
+                    <span>August 2, 2022</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal1Label">April 20, 2022</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="path/to/image1.jpg" alt="Image 1">
+                    <img src="path/to/image2.jpg" alt="Image 2">
+                    <img src="path/to/image3.jpg" alt="Image 3">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal2Label">April 27, 2022</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="path/to/image1.jpg" alt="Image 1">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal3Label">May 2, 2022</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="path/to/image1.jpg" alt="Image 1">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="modal4Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal4Label">June 2, 2022</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="path/to/image1.jpg" alt="Image 1">
+                    <img src="path/to/image2.jpg" alt="Image 2">
+                    <img src="path/to/image3.jpg" alt="Image 3">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="modal5Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal5Label">June 7, 2022</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="path/to/image1.jpg" alt="Image 1">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal6" tabindex="-1" aria-labelledby="modal6Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal6Label">July 7, 2022</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="path/to/image1.jpg" alt="Image 1">
+                    <img src="path/to/image2.jpg" alt="Image 2">
+                    <img src="path/to/image3.jpg" alt="Image 3">
+                    <img src="path/to/image4.jpg" alt="Image 4">
+                    <img src="path/to/image5.jpg" alt="Image 5">
+                    <img src="path/to/image6.jpg" alt="Image 6">
+                    <img src="path/to/image7.jpg" alt="Image 7">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal7" tabindex="-1" aria-labelledby="modal7Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal7Label">August 2, 2022</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="path/to/image1.jpg" alt="Image 1">
+                    <img src="path/to/image2.jpg" alt="Image 2">
+                    <img src="path/to/image3.jpg" alt="Image 3">
+                    <img src="path/to/image4.jpg" alt="Image 4">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
