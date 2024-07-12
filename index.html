@@ -39,12 +39,29 @@
             top: 50%;
             left: 50%;
             transform: translateX(-50%) translateY(-50%);
-            width: 12px;
-            height: 12px;
-            background: #6203dd;
+            width: 16px;
+            /* Increase the size */
+            height: 16px;
+            /* Increase the size */
+            background: #007bff;
+            /* Change color to blue */
+            border: 2px solid #fff;
+            /* Add a white border */
             border-radius: 50%;
             z-index: 2;
+            transition: background 0.3s, transform 0.3s;
+            /* Smooth transition */
         }
+
+        .timeline-item:hover:before {
+            background: #0056b3;
+            /* Darker blue on hover */
+            transform: translateX(-50%) translateY(-50%) scale(1.2);
+            /* Slightly enlarge on hover */
+            cursor: pointer;
+            /* Change cursor to pointer */
+        }
+
 
         .timeline-item span {
             display: block;
@@ -83,6 +100,9 @@
                 </li>
                 <li class="timeline-item" data-toggle="modal" data-target="#modal7">
                     <span>August 2, 2022</span>
+                </li>
+                <li class="timeline-item" data-toggle="modal" data-target="#modal8">
+                    <span>August 8, 2022</span>
                 </li>
             </ul>
         </div>
@@ -210,6 +230,22 @@
                     <img src="august 2 (2).png" alt="Image 3">
                     <img src="august 2 (3).png" alt="Image 4">
                     <img src="august 2 (4).png" alt="Image 4">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal8" tabindex="-1" aria-labelledby="modal8Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal8Label">August 8, 2022</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="before august 8 (showcase).jpg" alt="Image 1">
+                    <img src="before august 8 (showcase) (2).jpg" alt="Image 2">
                 </div>
             </div>
         </div>
