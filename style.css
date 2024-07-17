@@ -55,8 +55,14 @@
     padding-left: 40px;
     text-align: left;
     /* border-left: 3px solid black; */
+    cursor: pointer;
 
+    transition: font-weight 0.3s, transform 0.3s;
 
+}
+
+.timeline-item:hover {
+    font-weight: bold;
 }
 
 /* .timeline-item:before {
@@ -70,11 +76,11 @@
 .timeline-item:before {
     content: '';
     position: absolute;
-    top: 6px;
+    top: 5px;
     left: 11px;
     width: 16px;
     height: 16px;
-    background: #007bff;
+    background: orange;
     border: 2px solid #fff;
     border-radius: 50%;
     z-index: 2;
