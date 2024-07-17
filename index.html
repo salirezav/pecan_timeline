@@ -6,82 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timeline with Image Gallery</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .timeline {
-            position: relative;
-            margin: 20px 0;
-            padding: 0;
-            list-style: none;
-            text-align: center;
-        }
-
-        .timeline:before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: #ccc;
-            z-index: 1;
-        }
-
-        .timeline-item {
-            position: relative;
-            display: inline-block;
-            width: 12%;
-            text-align: center;
-        }
-
-        .timeline-item:before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translateX(-50%) translateY(-50%);
-            width: 16px;
-            /* Increase the size */
-            height: 16px;
-            /* Increase the size */
-            background: #007bff;
-            /* Change color to blue */
-            border: 2px solid #fff;
-            /* Add a white border */
-            border-radius: 50%;
-            z-index: 2;
-            transition: background 0.3s, transform 0.3s;
-            /* Smooth transition */
-        }
-
-        .timeline-item:hover:before {
-            background: #0056b3;
-            /* Darker blue on hover */
-            transform: translateX(-50%) translateY(-50%) scale(1.2);
-            /* Slightly enlarge on hover */
-            cursor: pointer;
-            /* Change cursor to pointer */
-        }
-
-
-        .timeline-item span {
-            display: block;
-            /* margin-top: 20px; */
-            margin-top: 70px;
-        }
-
-        .modal-body img {
-            width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <div class="container">
-        <div class="row justify-content-center">
+        <div class="row time-frame-holder">
+
+
+            <div class="segment d-flex">
+                <div class="time-frame">
+                    <span class="">Initial Idea</span>
+                    <div class="time-frame-line initial"></div>
+                </div>
+                <div class="time-frame ">
+                    <span>Refinement of the Idea</span>
+                    <div class="time-frame-line refinement"></div>
+                </div>
+                <div class="time-frame ">
+                    <span>Development of Prototypes</span>
+                    <div class="time-frame-line development"></div>
+                </div>
+            </div>
+
+
             <ul class="timeline">
                 <li class="timeline-item" data-toggle="modal" data-target="#modal1">
-                    <span>February 24, 2022</span>
+                    <span>April 20, 2022</span>
                 </li>
                 <li class="timeline-item" data-toggle="modal" data-target="#modal2">
                     <span>April 27, 2022</span>
@@ -95,41 +47,33 @@
                 <li class="timeline-item" data-toggle="modal" data-target="#modal5">
                     <span>June 7, 2022</span>
                 </li>
-                <li class="timeline-item" data-toggle="modal" data-target="#modal5">
+                <li class="timeline-item" data-toggle="modal" data-target="#modal6">
                     <span>June 24, 2022</span>
                 </li>
-                <li class="timeline-item" data-toggle="modal" data-target="#modal6">
+                <li class="timeline-item" data-toggle="modal" data-target="#modal7">
                     <span>July 7, 2022</span>
                 </li>
-                <li class="timeline-item" data-toggle="modal" data-target="#modal7">
+                <li class="timeline-item" data-toggle="modal" data-target="#modal8">
                     <span>August 2, 2022</span>
                 </li>
-                <li class="timeline-item" data-toggle="modal" data-target="#modal8">
+                <li class="timeline-item" data-toggle="modal" data-target="#modal9">
+                    <span>August 6, 2022</span>
+                </li>
+                <li class="timeline-item" data-toggle="modal" data-target="#modal10">
+                    <span>August 7, 2022</span>
+                </li>
+                <li class="timeline-item" data-toggle="modal" data-target="#modal11">
                     <span>August 8, 2022</span>
                 </li>
+                <li class="timeline-item" data-toggle="modal" data-target="#modal12">
+                    <span>February 24, 2023</span>
+                </li>
             </ul>
+
         </div>
     </div>
 
     <!-- Modals -->
-    <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modal1Label">February 24, 2022</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <img src="Email- Hunter to Niloofar about doablity of fabricating the designs- 06.24.2022.png"
-                        alt="Image 1">
-                    <img src="april 20 (2).png" alt="Image 2">
-                    <img src="april 20 (3).png" alt="Image 3">
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -159,7 +103,7 @@
                 </div>
                 <div class="modal-body">
                     <img src="april 27 (1).png" alt="Image 1">
-                    <img src="april 27 (2).png" alt="Image 1">
+                    <img src="april 27 (2).png" alt="Image 2">
                 </div>
             </div>
         </div>
@@ -213,11 +157,12 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="modal5Label" aria-hidden="true">
+
+    <div class="modal fade" id="modal6" tabindex="-1" aria-labelledby="modal6Label" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modal5Label">June 24, 2022</h5>
+                    <h5 class="modal-title" id="modal6Label">June 24, 2022</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -230,11 +175,11 @@
         </div>
     </div>
 
-    <div class="modal fade" id="modal6" tabindex="-1" aria-labelledby="modal6Label" aria-hidden="true">
+    <div class="modal fade" id="modal7" tabindex="-1" aria-labelledby="modal7Label" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modal6Label">July 7, 2022</h5>
+                    <h5 class="modal-title" id="modal7Label">July 7, 2022</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -242,8 +187,8 @@
                 <div class="modal-body">
                     <img src="july 7.png" alt="Image 7">
                     <img src="july 7 (1).png" alt="Image 1">
-                    <img src="july 7 (2).png" alt="Image 3">
-                    <img src="july 7 (3).png" alt="Image 2">
+                    <img src="july 7 (2).png" alt="Image 2">
+                    <img src="july 7 (3).png" alt="Image 3">
                     <img src="july 7 (4).png" alt="Image 4">
                     <img src="july 7 (5).png" alt="Image 5">
                     <img src="july 7 (6).png" alt="Image 6">
@@ -252,11 +197,11 @@
         </div>
     </div>
 
-    <div class="modal fade" id="modal7" tabindex="-1" aria-labelledby="modal7Label" aria-hidden="true">
+    <div class="modal fade" id="modal8" tabindex="-1" aria-labelledby="modal8Label" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modal7Label">August 2, 2022</h5>
+                    <h5 class="modal-title" id="modal8Label">August 2, 2022</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -266,18 +211,18 @@
                     <img src="august 2 (1).png" alt="Image 2">
                     <img src="august 2 (2).png" alt="Image 3">
                     <img src="august 2 (3).png" alt="Image 4">
-                    <img src="august 2 (4).png" alt="Image 5">
-                    <img src="Email- Niloofar to Hunter asking for fabricating my designs- 08.02.2022.png"
-                        alt="Image 6">
+                    <a href="Workshop Summary- Mentioning showing the designs and prototypes to Industry partners- 09.01.2022.pdf"
+                        download>Download PDF</a>
                 </div>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="modal8" tabindex="-1" aria-labelledby="modal8Label" aria-hidden="true">
+
+    <div class="modal fade" id="modal9" tabindex="-1" aria-labelledby="modal9Label" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modal8Label">August 6, 2022</h5>
+                    <h5 class="modal-title" id="modal9Label">August 6, 2022</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -288,26 +233,28 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="modal8" tabindex="-1" aria-labelledby="modal8Label" aria-hidden="true">
+
+    <div class="modal fade" id="modal10" tabindex="-1" aria-labelledby="modal10Label" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modal8Label">August 7, 2022</h5>
+                    <h5 class="modal-title" id="modal10Label">August 7, 2022</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <img src="Final Slides that I present in workshop- 08.07.2022" alt="Image 2">
+                    <img src="Final Slides that I present in workshop- 08.07.2022.png" alt="Image 2">
                 </div>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="modal8" tabindex="-1" aria-labelledby="modal8Label" aria-hidden="true">
+
+    <div class="modal fade" id="modal11" tabindex="-1" aria-labelledby="modal11Label" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modal8Label">August 8, 2022</h5>
+                    <h5 class="modal-title" id="modal11Label">August 8, 2022</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -315,7 +262,27 @@
                 <div class="modal-body">
                     <img src="before august 8 (showcase).jpg" alt="Image 1">
                     <img src="before august 8 (showcase) (2).jpg" alt="Image 2">
-                    <img src="Workshop Summary- Mentioning showing the designs and prototypes to Industry partners- 09.01.2022.pdf" alt="Image 2">
+                    <a href="Workshop Summary- Mentioning showing the designs and prototypes to Industry partners- 09.01.2022.pdf"
+                        download>Download PDF</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal12" tabindex="-1" aria-labelledby="modal12Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal12Label">February 24, 2023</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="Email- Hunter to Niloofar about doablity of fabricating the designs- 06.24.2022.png"
+                        alt="Image 1">
+                    <img src="april 20 (2).png" alt="Image 2">
+                    <img src="april 20 (3).png" alt="Image 3">
                 </div>
             </div>
         </div>
