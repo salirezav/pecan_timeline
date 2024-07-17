@@ -1,35 +1,36 @@
 .timeline {
     position: relative;
-    margin: 20px 0;
+    /* margin: 20px 0; */
     padding: 0;
     list-style: none;
-    text-align: center;
 }
 
 .timeline:before {
-    content: "";
+    content: '';
     position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 2px;
+    top: 0;
+    left: 18px;
+    /* Adjusted to align with the time frame */
+    width: 2px;
+    height: 100%;
     background: #ccc;
     z-index: 1;
 }
 
 .timeline-item {
     position: relative;
-    display: inline-block;
-    width: 8%;
-    text-align: center;
+    margin-bottom: 20px;
+    padding-left: 18px;
+    /* Adjusted to align with the time frame */
+    text-align: left;
 }
 
 .timeline-item:before {
-    content: "";
+    content: '';
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    top: 12px;
+    left: 11px;
+    /* Adjusted to align with the time frame */
     width: 16px;
     height: 16px;
     background: #007bff;
@@ -41,13 +42,13 @@
 
 .timeline-item:hover:before {
     background: #0056b3;
-    transform: translateX(-50%) translateY(-50%) scale(1.2);
+    transform: scale(1.2);
     cursor: pointer;
 }
 
 .timeline-item span {
     display: block;
-    margin-top: -30px;
+    margin-top: -5px;
     position: relative;
     z-index: 3;
 }
@@ -56,62 +57,53 @@
     width: 100%;
 }
 
-.segment {
-    background-color: rgba(10, 10, 10, .4);
-}
-
-.time-frame-holder {
-    position: relative;
-    /* padding-top: 100px; */
-    background-color: rgba(120, 10, 50, .1);
-
-}
-
 .time-frame {
-    /* flex-direction: row;
-    flex-wrap: nowrap;
-    flex-flow: row;
-    align-content: center;
-    text-align: center;
-    align-content: center; */
-    /* justify-items: ; */
-    /* position: absolute; */
-    /* padding: 25px; */
+    position: relative;
+    text-align: left;
+    margin: 40px 0;
+    padding: 0;
+    list-style: none;
 }
 
-.time-frame span {
+.time-frame li {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 100px;
+}
+
+.time-frame li span {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
 }
 
 .time-frame-line {
     position: absolute;
     top: 25px;
-    left: 0;
-    height: 2px;
+    left: 50px;
+    width: 2px;
     z-index: 0;
 }
 
 .time-frame-line.initial {
     background: #ff5733;
     /* Orange */
-    width: 100%;
-    /* For April 20, 2022 */
+    height: 50px;
+    /* Adjust as needed */
 }
 
 .time-frame-line.refinement {
     background: #33ff57;
     /* Green */
-    width: 100%;
-    /* From April 27, 2022 to August 2, 2022 */
-    left: 8.3%;
+    height: 200px;
+    /* Adjust as needed */
 }
 
 .time-frame-line.development {
     background: #3357ff;
     /* Blue */
-    width: 100%;
-    /* From August 2, 2022 to August 8, 2022 */
-    left: 58.3%;
+    height: 100px;
+    /* Adjust as needed */
 }

@@ -4,35 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timeline with Image Gallery</title>
+    <title>Vertical Timeline with Image Gallery</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
     <div class="container">
-        <div class="row time-frame-holder">
-
-
-            <div class="segment d-flex">
-                <div class="time-frame">
-                    <span class="">Initial Idea</span>
+        <div class="row">
+            <ul class="time-frame">
+                <li>
+                    <span>Initial Idea</span>
                     <div class="time-frame-line initial"></div>
-                </div>
-                <div class="time-frame ">
+                </li>
+                <li>
                     <span>Refinement of the Idea</span>
                     <div class="time-frame-line refinement"></div>
-                </div>
-                <div class="time-frame ">
+                </li>
+                <li>
                     <span>Development of Prototypes</span>
                     <div class="time-frame-line development"></div>
-                </div>
-            </div>
-
+                </li>
+            </ul>
 
             <ul class="timeline">
-                <li class="timeline-item" data-toggle="modal" data-target="#modal1">
+                <li class="timeline-item initial" data-toggle="modal" data-target="#modal1">
                     <span>April 20, 2022</span>
                 </li>
                 <li class="timeline-item" data-toggle="modal" data-target="#modal2">
@@ -69,7 +67,7 @@
                     <span>February 24, 2023</span>
                 </li>
             </ul>
-
+            
         </div>
     </div>
 
@@ -244,7 +242,10 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <img src="Final Slides that I present in workshop- 08.07.2022.png" alt="Image 2">
+                    <a href=".\Final Slides that I present in workshop- 08.07.2022">
+                        <h2 class="pdf-file"><br />PDF File:</h2>Final Slides that I present in
+                        workshop- 08.07.2022.pdf
+                    </a>
                 </div>
             </div>
         </div>
@@ -260,10 +261,14 @@
                     </button>
                 </div>
                 <div class="modal-body">
+                    <a href=".\Workshop Summary- Mentioning showing the designs and prototypes to Industry partners- 09.01.2022.pdf"
+                        download>
+                        <h2 class="pdf-file"><br />PDF File:</h2>Workshop Summary- Mentioning showing the designs and
+                        prototypes to Industry partners-
+                        09.01.2022.pdf
+                    </a>
                     <img src="before august 8 (showcase).jpg" alt="Image 1">
                     <img src="before august 8 (showcase) (2).jpg" alt="Image 2">
-                    <a href="Workshop Summary- Mentioning showing the designs and prototypes to Industry partners- 09.01.2022.pdf"
-                        download>Download PDF</a>
                 </div>
             </div>
         </div>
