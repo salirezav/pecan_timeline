@@ -1,6 +1,6 @@
 .timeline {
     position: relative;
-    /* margin: 20px 0; */
+    margin: 80px 0;
     padding: 0;
     list-style: none;
 }
@@ -8,7 +8,7 @@
 .timeline:before {
     content: '';
     position: absolute;
-    top: 0;
+    top: -20px;
     left: 18px;
     /* Adjusted to align with the time frame */
     width: 2px;
@@ -20,15 +20,16 @@
 .timeline-item {
     position: relative;
     margin-bottom: 20px;
-    padding-left: 18px;
+    padding-left: 28px;
     /* Adjusted to align with the time frame */
     text-align: left;
+
 }
 
 .timeline-item:before {
     content: '';
     position: absolute;
-    top: 12px;
+    top: 6px;
     left: 11px;
     /* Adjusted to align with the time frame */
     width: 16px;
@@ -58,6 +59,7 @@
 }
 
 .time-frame {
+    /* background-color: rgba(255, 255, 25, 0.3); */
     position: relative;
     text-align: left;
     margin: 40px 0;
@@ -68,7 +70,8 @@
 .time-frame li {
     position: relative;
     margin-bottom: 40px;
-    padding-left: 100px;
+    padding-left: 20px;
+    display: block;
 }
 
 .time-frame li span {
